@@ -33,9 +33,11 @@ jobs:
 
       - name: Determine image tag
         id: get_tag
+        env:
+          IMAGE_TAG: ${{ inputs.image_tag }}
         run: |
-          if [ -n "${{ inputs.image_tag }}" ]; then
-            echo "tag=${{ inputs.image_tag }}" >> $GITHUB_OUTPUT
+          if [ -n "$IMAGE_TAG" ]; then
+            echo "tag=$IMAGE_TAG" >> $GITHUB_OUTPUT
           else
             echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
           fi

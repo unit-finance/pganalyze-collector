@@ -4,10 +4,7 @@ name: CI
 permissions: {}
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch: # disabled: originally triggered on push/PR to main
 
 jobs:
   build:

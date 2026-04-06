@@ -3,7 +3,7 @@ name: Release
 # N.B.: build steps should match the tests we run in ci.yml
 
 on:
-  create
+  workflow_dispatch: # disabled: originally triggered on create (tag)
 
 jobs:
   build:
