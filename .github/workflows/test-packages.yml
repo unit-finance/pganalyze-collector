@@ -6,7 +6,6 @@ on:
     paths:
       - 'contrib/**'
       - 'packages/**'
-  workflow_dispatch:
 
 jobs:
   build_x86_64:
